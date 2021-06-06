@@ -31,7 +31,6 @@ body {
   width: 100%;
   border-radius: 10px;
   overflow: hidden;
-  
 }
 
 .card .card__circle::before {
@@ -51,7 +50,7 @@ body {
   background: #191c1f;
   -webkit-clip-path: circle(400px at center);
   clip-path: circle(400px at center);
-  box-shadow: 0 20px 40px rgba(25,28,31,0.5);
+  box-shadow: 0 20px 40px rgba(25, 28, 31, 0.5);
 }
 
 .card img {
@@ -74,7 +73,7 @@ body {
   position: relative;
   left: 20%;
   transition: 0.5s;
-  padding: 20px 20px 20px 40px ;
+  padding: 20px 20px 20px 40px;
   visibility: hidden;
   opacity: 0;
 }
@@ -104,8 +103,8 @@ body {
 .card .card__content a:link,
 .card .card__content a:visited {
   text-decoration: none;
-  color:#fff;
-  background:#cf1b27 ;
+  color: #fff;
+  background: #cf1b27;
   padding: 10px;
   margin-top: 30px;
   border-radius: 5px;
@@ -126,7 +125,6 @@ body {
   background: #841119;
 }
 
-
 @media only screen and (max-width: 480px) {
   .card {
     width: auto;
@@ -134,33 +132,27 @@ body {
     align-items: flex-start;
     flex-direction: column-reverse;
     margin: 12px;
-  position: relative;
+    position: relative;
   }
 
   .card:hover {
     height: 600px;
   }
 
-  .card:hover img{
-    top: 30%;
+  .card:hover img {
+    top: 29%;
     left: 50%;
-    height: 320px;
+    height: 310px;
   }
 
   .card .card__content {
     padding: 25px;
     width: 100%;
     left: 0;
-
   }
 
   .card .card__content h2 {
-    margin-top: 60px;
-    margin-bottom: 10px;
+    margin-bottom: 8px;
     font-size: 2em;
-
   }
-  
 }
-
-
