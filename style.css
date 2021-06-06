@@ -1,0 +1,166 @@
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.card {
+  height: 350px;
+  width: 600px;
+  display: flex;
+  align-items: center;
+  border-radius: 10px;
+  position: relative;
+  transition: 0.5s;
+}
+
+.card .card__circle {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  border-radius: 10px;
+  overflow: hidden;
+  
+}
+
+.card .card__circle::before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background: #cf1b27;
+  -webkit-clip-path: circle(120px at center);
+  clip-path: circle(120px at center);
+  transition: 0.5s;
+}
+
+.card:hover .card__circle::before {
+  background: #191c1f;
+  -webkit-clip-path: circle(400px at center);
+  clip-path: circle(400px at center);
+  box-shadow: 0 20px 40px rgba(25,28,31,0.5);
+}
+
+.card img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 300px;
+  transition: 0.5s;
+  pointer-events: none;
+}
+
+.card:hover img {
+  left: 75%;
+  height: 450px;
+}
+
+.card .card__content {
+  width: 50%;
+  position: relative;
+  left: 20%;
+  transition: 0.5s;
+  padding: 20px 20px 20px 40px ;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.card:hover .card__content {
+  left: 0;
+  opacity: 1;
+  visibility: visible;
+}
+
+.card .card__content h2 {
+  color: #fff;
+  font-size: 2.5em;
+  line-height: 1em;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  font-weight: 400;
+}
+
+.card .card__content p {
+  color: #fff;
+  font-size: 1em;
+  line-height: 1em;
+  font-weight: 300;
+}
+
+.card .card__content a:link,
+.card .card__content a:visited {
+  text-decoration: none;
+  color:#fff;
+  background:#cf1b27 ;
+  padding: 10px;
+  margin-top: 30px;
+  border-radius: 5px;
+  display: inline-block;
+  font-size: 1.2em;
+}
+
+.card:hover .card__content a:link,
+.card:hover .card__content a:visited {
+  left: 0;
+  animation: tada;
+  animation-duration: 1s;
+  animation-timing-function: ease-in-out;
+}
+
+.card .card__content a:hover,
+.card .card__content a:active {
+  background: #841119;
+}
+
+
+@media only screen and (max-width: 480px) {
+  .card {
+    width: auto;
+    max-width: 350px;
+    align-items: flex-start;
+    flex-direction: column-reverse;
+    margin: 12px;
+  position: relative;
+  }
+
+  .card:hover {
+    height: 600px;
+  }
+
+  .card:hover img{
+    top: 30%;
+    left: 50%;
+    height: 320px;
+  }
+
+  .card .card__content {
+    padding: 25px;
+    width: 100%;
+    left: 0;
+
+  }
+
+  .card .card__content h2 {
+    margin-top: 60px;
+    margin-bottom: 10px;
+    font-size: 2em;
+
+  }
+  
+}
+
+
